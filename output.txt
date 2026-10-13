@@ -1,0 +1,63 @@
+Shape (rows, columns): (366, 22)
+   MinTemp  MaxTemp  Rainfall  Evaporation  ...  Temp3pm RainToday  RISK_MM  \
+0      8.0     24.3       0.0          3.4  ...     23.6        No      3.6   
+1     14.0     26.9       3.6          4.4  ...     25.7       Yes      3.6   
+2     13.7     23.4       3.6          5.8  ...     20.2       Yes     39.8   
+3     13.3     15.5      39.8          7.2  ...     14.1       Yes      2.8   
+4      7.6     16.1       2.8          5.6  ...     15.4       Yes      0.0   
+
+  RainTomorrow  
+0          Yes  
+1          Yes  
+2          Yes  
+3          Yes  
+4           No  
+
+[5 rows x 22 columns]
+
+Missing values per column:
+Sunshine          3
+WindGustDir       3
+WindGustSpeed     2
+WindDir9am       31
+WindDir3pm        1
+WindSpeed9am      7
+dtype: int64
+
+Summary statistics:
+       MinTemp  MaxTemp  Rainfall  Humidity3pm
+count   366.00   366.00    366.00       366.00
+mean      7.27    20.55      1.43        44.52
+std       6.03     6.69      4.23        16.85
+min      -5.30     7.60      0.00        13.00
+25%       2.30    15.02      0.00        32.25
+50%       7.45    19.65      0.00        43.00
+75%      12.50    25.50      0.20        55.00
+max      20.90    35.80     39.80        96.00
+
+Average MaxTemp: 20.55 C
+Hottest day  : 35.8 C
+Coldest day  : -5.3 C
+Total rainfall: 522.8 mm
+
+RainTomorrow counts:
+RainTomorrow
+No     300
+Yes     66
+Name: count, dtype: int64
+
+Training rows: 292 | Testing rows: 74
+
+Logistic Regression
+Accuracy: 81.08 %
+Confusion matrix:
+ [[55  6]
+ [ 8  5]]
+
+Random Forest
+Accuracy: 89.19 %
+Confusion matrix:
+ [[60  1]
+ [ 7  6]]
+
+Sample prediction for first test day: No Rain | Actual: No Rain
